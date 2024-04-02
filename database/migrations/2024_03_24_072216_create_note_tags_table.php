@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('note_tags', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('note_id');
-            $table->unsignedBigInteger('tag_id')->nullable();
+            $table->unsignedBigInteger('tag_id');
             $table->timestamps();
 
             // IDX
             $table->index('note_id', 'note_tag_note_idx');
-            $table->foreign('tag_id', 'note_tag_tag_fx');
+            $table->index('tag_id', 'note_tag_tag_idx');
 
             // FX
 

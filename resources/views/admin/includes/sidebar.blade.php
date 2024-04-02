@@ -17,10 +17,15 @@
         <li class="nav-item">
             <a href="{{ route('admin.category.index') }}" class="nav-link">
               <i class="nav-icon fas fa-th-list"></i>
-              <p>
-                Категории
-              </p>
+              <p>Категории</p>
             </a>
+            
+        </li>
+        <li class="nav-item">
+          <a href="{{ route('admin.tag.index') }}" class="nav-link">
+            <i class="nav-icon fa fa-tags" aria-hidden="true"></i>
+            <p>Теги</p>
+          </a>
         </li>
          
           
