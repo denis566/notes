@@ -27,6 +27,20 @@ use Illuminate\Support\Facades\Route;
         Route::group(['namespace' => 'Main'], function () {
             Route::get('/', 'IndexController')->name('index');
         });
+
+
+        Route::group(['namespace' => 'Note', 'prefix' => 'notes'], function () {
+            Route::get('/', 'IndexController')->name('admin.note.index');
+            Route::get('/create', 'CreateController')->name('admin.note.create');
+            Route::post('/', 'StoreController')->name('admin.note.store');
+            Route::get('/{note}', 'ShowController')->name('admin.note.show');
+            Route::get('/{note}/edit', 'EditController')->name('admin.note.edit');
+            Route::patch('/{note}', 'UpdateController')->name('admin.note.update');
+           Route::delete('/{note}', 'DeleteController')->name('admin.note.delete');
+        });
+
+
+
         Route::group(['namespace' => 'Category', 'prefix' => 'categories'], function () {
             Route::get('/', 'IndexController')->name('admin.category.index');
             Route::get('/create', 'CreateController')->name('admin.category.create');

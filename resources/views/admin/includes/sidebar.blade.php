@@ -15,11 +15,16 @@
         
          
         <li class="nav-item">
+          <a href="{{ route('admin.note.index') }}" class="nav-link">
+            <i class="nav-icon fa fa-sticky-note" aria-hidden="true"></i>
+            <p>Записи</p>
+          </a>
+        </li>
+        <li class="nav-item">
             <a href="{{ route('admin.category.index') }}" class="nav-link">
               <i class="nav-icon fas fa-th-list"></i>
               <p>Категории</p>
             </a>
-            
         </li>
         <li class="nav-item">
           <a href="{{ route('admin.tag.index') }}" class="nav-link">
